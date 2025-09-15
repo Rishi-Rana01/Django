@@ -9,4 +9,5 @@ def home(request):
 
 
 def contact(request):
-    return HttpResponse("Hello, World - Rishi Rana- contact Page")
+    # return HttpResponse("Hello, World - Rishi Rana- contact Page")
+    return render(request,'website/contact.html')
