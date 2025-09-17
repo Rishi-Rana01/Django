@@ -1,4 +1,5 @@
 {% comment %} Comman file use everywhere {% endcomment %}
+{% load static tailwind_tags %}
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
@@ -9,6 +10,7 @@
         {% block title %}Default Value{% endblock %}
     </title>
      <link rel="stylesheet" href="{% static 'style.css' %}">
+      {% tailwind_css %}
 </head>
 <body>
     <nav>This is our navbar</nav>
