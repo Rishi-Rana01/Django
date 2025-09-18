@@ -1,3 +1,8 @@
 If Node.js and npm are already installed but not detected, set the NPM_BIN_PATH variable in your Django settings.py
 
 NPM_BIN_PATH = r"C:\Program Files\nodejs\npm.cmd"
+
+
+for Media in foolder setting.py
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
