@@ -2,7 +2,18 @@ If Node.js and npm are already installed but not detected, set the NPM_BIN_PATH 
 
 NPM_BIN_PATH = r"C:\Program Files\nodejs\npm.cmd"
 
+****************************************************************
 
-for Media in foolder setting.py
+for Media in folder setting.py
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+***************************************************************
+
+CASCADE - When any record on Parent table is delete or update
+ it automatically update,delete that change in its child so their  is 
+ no  need to delete recod in child manually
+ - It maintain integrity and consistency across the table
+
+
+
