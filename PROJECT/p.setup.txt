@@ -1,0 +1,88 @@
+#First Create Virtual enviroment
+python -m venv .venv  
+
+2) run venv
+ .venv\Scripts\Activate
+
+3) Install Django
+pip install django
+
+4) Create django project and name
+django-admin startproject center || >center- project name
+
+
+5) Enter the Center folder
+cd center
+
+6)Runserver
+ python manage.py runserver
+
+7)Start migration
+python manage.py makemigrations
+python manage.py migrate
+
+
+#**How to create Super User for admin access**
+python manage.py createsuperuser 
+rishi-your choice
+Rishi123
+
+
+#***For image Import *** -setting in setting.py in center
+1) import os
+2) DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField' - **After that
+# For image Import
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+
+
+#***For Create Static folder - to handle static asscerts like js, css, html**** in setting.py in the end
+
+STATIC_URL = 'static/'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+
+2) now in urls.py
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+]+  static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+
+3) Import this in urls.py
+
+from django.conf import settings
+from django.conf.urls.static import static
+
+
+#***If Node.js and npm are already installed but not detected***
+ set the NPM_BIN_PATH variable in your Django settings.py
+
+NPM_BIN_PATH = r"C:\Program Files\nodejs\npm.cmd"
+
+
+#***Create app in Django***
+1) python manage.py startapp (tweet)-app name
+
+2) Now create file urls.py in tweet folder
+3) copy all data from main urls.py to new urls.py(tweet)
+4) create views in views.py - like this
+
+from django.shortcuts import render
+
+# Create your views here.
+def index(request):
+    return render(request, 'index.html')
+5) in urls.py provide their refernse
+
+urlpatterns = [
+    path('', views.index, name= 'index'),
+]
+
+6) after tell the main setting.py new app is installed name=(tweet)
+ in NSTALLED_APPS 
+ 'tweet'
+
+7) in setting.py TEMPLATES in DIRS 
+  add this for access the template from anywhere
+  'DIRS': [os.path.join(BASE_DIR, 'templates')],
