@@ -1,31 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        body {
-            background-color: black;
-            color: white;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-        }
-        h1 {
-            color: #ffffff;
-            font-size: 2.5em;
-            margin-bottom: 0.5em;
-        }
-        p {
-            font-size: 1.2em;
-            line-height: 1.5;
-            max-width: 600px;
-        }
-    </style>
-</head>
-<body>
-    <h1>Welcome to the Tweet App</h1>
-   
-</body>
-</html>
+{% extends "layout.html" %}
+
+{% block title %}
+    Tweet App
+{% endblock %}
+
+{% block content %}
+    <h1 class="text-center">Welcome to the Tweet App</h1>
+    <p>This is a simple template for displaying tweets.</p>
+{% endblock %}
